@@ -27,18 +27,18 @@ public class MainActivity extends AppCompatActivity{
         find_pwd = (TextView)findViewById(R.id.find_pwd);
         join = (TextView)findViewById(R.id.join);
 
-        login_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "ㅇ", Toast.LENGTH_SHORT).show();
-            }
-        });
-
         join.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), join.class);
                 startActivity(intent);
+            }
+        });
+
+        login_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "환경 지키기, 그린데이와 함께해요!", Toast.LENGTH_SHORT).show();
             }
         });
     }

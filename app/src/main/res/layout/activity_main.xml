@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/title"
+        android:id="@+id/join_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/nanum_eb"
@@ -60,7 +60,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintTop_toBottomOf="@+id/join_title"
         app:layout_constraintVertical_bias="0.038" />
 
     <EditText
@@ -184,6 +184,7 @@
         android:layout_marginTop="30dp"
         android:fontFamily="@font/nanum"
         android:text="계정을 잃어버리셨나요?"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/facebook_login" />
@@ -213,6 +214,7 @@
         android:layout_marginRight="8dp"
         android:fontFamily="@font/nanum"
         android:text="또는"
+        android:textColor="#000000"
         app:layout_constraintEnd_toStartOf="@+id/find_pwd"
         app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toEndOf="@+id/find_id"
@@ -243,6 +245,7 @@
         android:layout_marginRight="146dp"
         android:fontFamily="@font/nanum"
         android:text="환경을 지키고 싶어요!"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/find_pwd" />

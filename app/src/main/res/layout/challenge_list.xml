@@ -30,7 +30,7 @@
         app:layout_constraintTop_toTopOf="@+id/challenge_1" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/chall_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="143dp"
@@ -47,7 +47,7 @@
         app:layout_constraintTop_toTopOf="@+id/challenge_1" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/chall_intro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="13dp"
@@ -57,7 +57,7 @@
         android:text="용기를 깨끗하게 소독하고 집에서 \n 가까운 곳을 방문하여 음식 포장하기"
         android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/chall_title" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -67,7 +67,7 @@
         android:layout_marginRight="53dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintStart_toEndOf="@+id/chall_title"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/g_arrow_right" />
 

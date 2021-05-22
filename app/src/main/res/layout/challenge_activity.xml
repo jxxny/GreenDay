@@ -155,6 +155,7 @@
         app:srcCompat="@drawable/no_user" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="347dp"
         android:layout_height="511dp"
         android:layout_marginStart="32dp"

@@ -67,6 +67,23 @@ public class challenge extends AppCompatActivity {
             holder.type.setText(item.type);
             holder.name.setText(item.name);
             holder.intro.setText(item.intro);
+            ImageView imageView = (ImageView)holder.image;
+
+            Log.e("type", holder.type.getText().toString());
+
+            ViewGroup.LayoutParams params = imageView.getLayoutParams();
+            params.width = 100;
+            params.height = 100;
+            imageView.setLayoutParams(params);
+
+            if(holder.type.getText().equals("용기"))
+                imageView.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.salad, null));
+
+            if(holder.type.getText().equals("대중교통"))
+                imageView.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.bus, null));
+
+            if(holder.type.getText().equals("텀블러"))
+                imageView.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.tumbler, null));
         }
 
         @Override
@@ -88,19 +105,6 @@ public class challenge extends AppCompatActivity {
             intro = itemView.findViewById(R.id.chall_intro);
             image = itemView.findViewById(R.id.chall_img_1);
 
-            ViewGroup.LayoutParams params = image.getLayoutParams();
-            params.width = 100;
-            params.height = 100;
-            image.setLayoutParams(params);
-
-            if(type.equals("용기"))
-                image.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.salad, null));
-
-            if(type.equals("대중교통"))
-                image.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.bus, null));
-
-            if(type.equals("텀블러"))
-                image.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.tumbler, null));
         }
     }
 

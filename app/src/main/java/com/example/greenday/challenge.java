@@ -9,10 +9,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -77,12 +79,28 @@ public class challenge extends AppCompatActivity {
         TextView type;
         TextView name;
         TextView intro;
+        ImageView image;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            type = (TextView)itemView.findViewById(R.id.chall_img_1);
-            name = (TextView)itemView.findViewById(R.id.chall_title);
-            intro = (TextView)itemView.findViewById(R.id.chall_intro);
+            type = itemView.findViewById(R.id.chall_type);
+            name = itemView.findViewById(R.id.chall_title);
+            intro = itemView.findViewById(R.id.chall_intro);
+            image = itemView.findViewById(R.id.chall_img_1);
+
+            ViewGroup.LayoutParams params = image.getLayoutParams();
+            params.width = 100;
+            params.height = 100;
+            image.setLayoutParams(params);
+
+            if(type.equals("용기"))
+                image.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.salad, null));
+
+            if(type.equals("대중교통"))
+                image.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.bus, null));
+
+            if(type.equals("텀블러"))
+                image.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.tumbler, null));
         }
     }
 

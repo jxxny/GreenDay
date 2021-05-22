@@ -26,11 +26,15 @@
         android:id="@+id/chall_intro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="99dp"
+        android:layout_marginRight="99dp"
         android:layout_marginBottom="20dp"
         android:fontFamily="@font/nanum"
         android:text="용기를 깨끗하게 소독하고 집에서 \n 가까운 곳을 방문하여 음식 포장하기"
         android:textSize="13sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/chall_img_1"
         app:layout_constraintStart_toStartOf="@+id/chall_title" />
 
     <ImageView
@@ -47,10 +51,31 @@
 
     <ImageView
         android:id="@+id/chall_img_1"
-        android:layout_width="74dp"
-        android:layout_height="71dp"
-        app:srcCompat="@drawable/salad"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="20dp" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginRight="23dp"
+        android:layout_marginBottom="19dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/chall_intro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/salad" />
+
+    <TextView
+        android:id="@+id/chall_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:background="#00FFFFFF"
+        android:text="TextView"
+        android:textColor="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/chall_img_1"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

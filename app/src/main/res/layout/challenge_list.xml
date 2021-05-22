@@ -3,72 +3,54 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="#00FFFFFF">
-
-    <TextView
-        android:id="@+id/challenge_1"
-        android:layout_width="339dp"
-        android:layout_height="96dp"
-        android:layout_marginTop="45dp"
-        android:background="@drawable/challenge"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/chall_img_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
-        android:layout_marginLeft="68dp"
-        android:fontFamily="@font/nanum"
-        android:text="샐러드"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="@+id/challenge_1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/challenge_1" />
+    android:layout_height="110dp"
+    android:background="@drawable/challenge">
 
     <TextView
         android:id="@+id/chall_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="143dp"
-        android:layout_marginLeft="143dp"
-        android:layout_marginTop="17dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginRight="36dp"
+        android:layout_marginStart="129dp"
+        android:layout_marginLeft="129dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginRight="75dp"
+        android:layout_marginBottom="12dp"
         android:fontFamily="@font/nanum_eb"
         android:text="#용기내 #용기내챌린지"
         android:textSize="17sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/chall_intro"
         app:layout_constraintEnd_toStartOf="@+id/imageView2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/challenge_1" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/chall_intro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="84dp"
-        android:layout_marginRight="84dp"
+        android:layout_marginBottom="20dp"
         android:fontFamily="@font/nanum"
         android:text="용기를 깨끗하게 소독하고 집에서 \n 가까운 곳을 방문하여 음식 포장하기"
         android:textSize="13sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chall_title" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/chall_title" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="0dp"
-        android:layout_height="18dp"
-        android:layout_marginEnd="53dp"
-        android:layout_marginRight="53dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="20dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginRight="26dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/chall_title"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/g_arrow_right" />
+
+    <ImageView
+        android:id="@+id/chall_img_1"
+        android:layout_width="74dp"
+        android:layout_height="71dp"
+        app:srcCompat="@drawable/salad"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="20dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

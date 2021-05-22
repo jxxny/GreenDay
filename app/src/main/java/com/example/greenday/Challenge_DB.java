@@ -23,10 +23,10 @@ public class Challenge_DB extends SQLiteOpenHelper {
 
         db.execSQL(challengeSQL);
 
-        challengeSQL = "INSERT INTO challenge(cha_type, cha_name, cha_intro) VALUES('용기', '#용기내#용기내챌린지', '용기를 깨끗하게 소독하고 집에서 가까운 곳을 방문하여 음식 포장해보기!')";
+        challengeSQL = "INSERT INTO challenge(cha_type, cha_name, cha_intro) VALUES('용기', '#용기내#용기내챌린지', '용기를 깨끗하게 소독하고 집에서\n 가까운 곳을 방문하여 음식 포장해보기!')";
         db.execSQL(challengeSQL);
 
-        challengeSQL = "INSERT INTO challenge(cha_type, cha_name, cha_intro) VALUES('대중교통', '대중교통 이용하기', '이산화탄소를 조금이나마 줄일 수 있도록 대중교통 이용하기!')";
+        challengeSQL = "INSERT INTO challenge(cha_type, cha_name, cha_intro) VALUES('대중교통', '대중교통 이용하기', '이산화탄소를 조금이나마\n 줄일 수 있도록 대중교통 이용하기!')";
         db.execSQL(challengeSQL);
 
         challengeSQL = "INSERT INTO challenge(cha_type, cha_name, cha_intro) VALUES('텀블러', '텀블러 사용하기', '환경을 위해 텀블러를 사용하여 500원 할인 받기!')";

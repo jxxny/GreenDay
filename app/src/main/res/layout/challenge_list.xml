@@ -12,14 +12,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="129dp"
         android:layout_marginLeft="129dp"
-        android:layout_marginEnd="75dp"
-        android:layout_marginRight="75dp"
         android:layout_marginBottom="12dp"
         android:fontFamily="@font/nanum_eb"
         android:text="#용기내 #용기내챌린지"
         android:textSize="17sp"
         app:layout_constraintBottom_toTopOf="@+id/chall_intro"
-        app:layout_constraintEnd_toStartOf="@+id/imageView2"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -39,13 +36,12 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="0dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="27dp"
-        android:layout_marginEnd="26dp"
-        android:layout_marginRight="26dp"
+        android:layout_width="29dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/chall_title"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/g_arrow_right" />
 

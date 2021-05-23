@@ -83,9 +83,6 @@ public class challenge extends AppCompatActivity {
                 imageView.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.bus, null));
 
             if(holder.type.getText().equals("텀블러")) {
-                params.width = 150;
-                params.height = 150;
-                imageView.setLayoutParams(params);
                 imageView.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.re_tumbler, null));
             }
 

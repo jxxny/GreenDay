@@ -1,5 +1,6 @@
 package com.example.greenday;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Canvas;
@@ -53,7 +54,8 @@ public class challenge extends AppCompatActivity {
         challenge_adapter.setOnMyTouchListener(new Challenge_Adapter.OnMyTouchListener() {
             @Override
             public void onTouch(View v, int pos) {
-                Toast.makeText(getApplicationContext(),"클릭"+list.get(pos),Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), PopupActivity.class);
+                startActivityForResult(intent, 1);
             }
         });
         recyclerView.addItemDecoration(new MyItemDecoration(list));

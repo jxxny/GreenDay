@@ -5,6 +5,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Canvas;
 import android.graphics.Rect;
+import android.media.Image;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -58,6 +59,7 @@ public class challenge extends AppCompatActivity {
                 startActivityForResult(intent, 1);
             }
         });
+
         recyclerView.addItemDecoration(new MyItemDecoration(list));
 
     }

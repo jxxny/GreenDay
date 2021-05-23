@@ -72,8 +72,8 @@ public class challenge extends AppCompatActivity {
             Log.e("type", holder.type.getText().toString());
 
             ViewGroup.LayoutParams params = imageView.getLayoutParams();
-            params.width = 100;
-            params.height = 100;
+            params.width = 150;
+            params.height = 150;
             imageView.setLayoutParams(params);
 
             if(holder.type.getText().equals("용기"))

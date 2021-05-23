@@ -84,6 +84,9 @@ public class challenge extends AppCompatActivity {
 
             if(holder.type.getText().equals("텀블러"))
                 imageView.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.tumbler, null));
+
+            if(holder.type.getText().equals("쓰레기"))
+                imageView.setImageDrawable(ResourcesCompat.getDrawable(getResources(),R.drawable.trash, null));
         }
 
         @Override

@@ -12,37 +12,37 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
         android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"
         android:layout_marginBottom="12dp"
         android:fontFamily="@font/nanum_eb"
         android:text="#용기내 #용기내챌린지"
         android:textSize="17sp"
         app:layout_constraintBottom_toTopOf="@+id/chall_intro"
-        app:layout_constraintStart_toEndOf="@+id/chall_img_1" />
+        app:layout_constraintStart_toEndOf="@+id/chall_img_1"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/chall_intro"
-        android:layout_width="187dp"
+        android:layout_width="204dp"
         android:layout_height="34dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginEnd="99dp"
-        android:layout_marginRight="99dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="15dp"
         android:fontFamily="@font/nanum"
         android:text="용기를 깨끗하게 소독하고 집에서 \n 가까운 곳을 방문하여 음식 포장하기"
-        android:textSize="13sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/chall_img_1"
-        app:layout_constraintStart_toStartOf="@+id/chall_title" />
+        app:layout_constraintHorizontal_bias="0.743"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.652" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="0dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="27dp"
-        android:layout_marginEnd="26dp"
-        android:layout_marginRight="26dp"
+        android:layout_width="24dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginRight="22dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/g_arrow_right" />

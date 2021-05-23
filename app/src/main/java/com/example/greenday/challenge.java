@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,7 +31,7 @@ public class challenge extends AppCompatActivity {
 
         recyclerView = (RecyclerView)findViewById(R.id.recyclerView);
 
-        ArrayList<Item> list = new ArrayList<>();
+        final ArrayList<Item> list = new ArrayList<>();
 
         Challenge_DB challenge_db = new Challenge_DB(this);
         SQLiteDatabase db = challenge_db.getReadableDatabase();
@@ -46,8 +47,17 @@ public class challenge extends AppCompatActivity {
         db.close();
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(new Challenge_Adapter(list));
+        Challenge_Adapter challenge_adapter = new Challenge_Adapter(list);
+        recyclerView.setAdapter(challenge_adapter);
+
+        challenge_adapter.setOnMyTouchListener(new Challenge_Adapter.OnMyTouchListener() {
+            @Override
+            public void onTouch(View v, int pos) {
+                Toast.makeText(getApplicationContext(),"클릭"+list.get(pos),Toast.LENGTH_SHORT).show();
+            }
+        });
         recyclerView.addItemDecoration(new MyItemDecoration(list));
+
     }
 
     class MyItemDecoration extends RecyclerView.ItemDecoration{

@@ -47,17 +47,17 @@ public class Challenge_Adapter extends RecyclerView.Adapter<Challenge_Adapter.My
         imageView.setLayoutParams(params);
 
         if(holder.type.getText().equals("용기"))
-            imageView.setImageDrawable(ResourcesCompat.getDrawable(getResources(),R.drawable.salad, null));
+            imageView.setImageResource(R.drawable.salad);
 
         if(holder.type.getText().equals("대중교통"))
-            imageView.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.bus, null));
+            imageView.setImageResource(R.drawable.bus);
 
         if(holder.type.getText().equals("텀블러")) {
-            imageView.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.re_tumbler, null));
+            imageView.setImageResource(R.drawable.re_tumbler);
         }
 
         if(holder.type.getText().equals("쓰레기"))
-            imageView.setImageDrawable(ResourcesCompat.getDrawable(getResources(),R.drawable.trash2, null));
+            imageView.setImageResource(R.drawable.trash2);
     }
 
     @Override

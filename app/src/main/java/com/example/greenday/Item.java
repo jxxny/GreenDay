@@ -9,7 +9,7 @@ public class Item {
     public Item(){
     }
 
-    public Item(String type, String name, String intro, int[image) {
+    public Item(String type, String name, String intro, int image) {
         this.type = type;
         this.name = name;
         this.intro = intro;

@@ -82,8 +82,12 @@ public class challenge extends AppCompatActivity {
             if(holder.type.getText().equals("대중교통"))
                 imageView.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.bus, null));
 
-            if(holder.type.getText().equals("텀블러"))
-                imageView.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.coffee_cup, null));
+            if(holder.type.getText().equals("텀블러")) {
+                params.width = 150;
+                params.height = 150;
+                imageView.setLayoutParams(params);
+                imageView.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.re_tumbler, null));
+            }
 
             if(holder.type.getText().equals("쓰레기"))
                 imageView.setImageDrawable(ResourcesCompat.getDrawable(getResources(),R.drawable.trash2, null));

@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 public class Challenge_DB extends SQLiteOpenHelper {
-    public static final int DATAVBASE_VERSION = 4;
+    public static final int DATAVBASE_VERSION = 9;
 
     public Challenge_DB(@Nullable Context context) {
         super(context, "challenge_db", null, DATAVBASE_VERSION);
@@ -23,16 +23,16 @@ public class Challenge_DB extends SQLiteOpenHelper {
 
         db.execSQL(challengeSQL);
 
-        challengeSQL = "INSERT INTO challenge(cha_type, cha_name, cha_intro) VALUES('용기', '#용기내#용기내챌린지', '용기를 깨끗하게 소독하고 집에서 가까운 곳을 방문하여 음식 포장해보기!')";
+        challengeSQL = "INSERT INTO challenge(cha_type, cha_name, cha_intro) VALUES('용기', '#용기내#용기내챌린지', '용기를 깨끗하게 소독하고 \n가까운 곳을 방문하여 포장해보기!')";
         db.execSQL(challengeSQL);
 
-        challengeSQL = "INSERT INTO challenge(cha_type, cha_name, cha_intro) VALUES('대중교통', '대중교통 이용하기', '이산화탄소를 조금이나마 줄일 수 있도록 대중교통 이용하기!')";
+        challengeSQL = "INSERT INTO challenge(cha_type, cha_name, cha_intro) VALUES('대중교통', '대중교통 이용하기', '이산화탄소를 조금이나마 \n줄일 수 있도록 대중교통 이용하기!')";
         db.execSQL(challengeSQL);
 
-        challengeSQL = "INSERT INTO challenge(cha_type, cha_name, cha_intro) VALUES('텀블러', '텀블러 사용하기', '환경을 위해 텀블러를 사용하여 500원 할인 받기!')";
+        challengeSQL = "INSERT INTO challenge(cha_type, cha_name, cha_intro) VALUES('텀블러', '텀블러 사용하기', '환경을 위해 텀블러를 \n사용하여 500원 할인 받기!')";
         db.execSQL(challengeSQL);
 
-        challengeSQL = "INSERT INTO challenge(cha_type, cha_name, cha_intro) VALUES('쓰레기', '쓰레기 줍기', '깨끗한 환경을 위해 길거리에 버려진 쓰레기를 주워 쓰레기통에 넣기')";
+        challengeSQL = "INSERT INTO challenge(cha_type, cha_name, cha_intro) VALUES('쓰레기', '쓰레기 줍기', '길거리에 버려진 쓰레기를 \n주워서 쓰레기통에 넣기')";
         db.execSQL(challengeSQL);
 
 

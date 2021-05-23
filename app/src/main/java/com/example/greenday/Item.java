@@ -4,14 +4,16 @@ public class Item {
     String type;
     String name;
     String intro;
+    int image;
 
     public Item(){
     }
 
-    public Item(String type, String name, String intro) {
+    public Item(String type, String name, String intro, int[image) {
         this.type = type;
         this.name = name;
         this.intro = intro;
+        this.image = image;
     }
 
     public String getType(){
@@ -33,5 +35,12 @@ public class Item {
     }
     public void setIntro(String intro){
         this.intro = intro;
+    }
+
+    public int getImage(){
+        return image;
+    }
+    public void setImage(int image){
+        this.image = image;
     }
 }

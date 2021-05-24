@@ -22,8 +22,10 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498" />
 
     <ImageView
         android:id="@+id/x"
@@ -32,6 +34,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
+        android:background="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/popup"
         app:layout_constraintTop_toTopOf="@+id/popup"
         app:srcCompat="@drawable/x" />
@@ -40,8 +43,8 @@
         android:id="@+id/start_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="45dp"
-        android:layout_marginRight="45dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
         android:background="@drawable/full_view_layout"
         android:elevation="5dp"
         android:fontFamily="@font/nanum"
@@ -53,8 +56,8 @@
         android:id="@+id/giveup_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
-        android:layout_marginLeft="45dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginBottom="30dp"
         android:background="@drawable/chall_giveup_layout"
         android:elevation="5dp"

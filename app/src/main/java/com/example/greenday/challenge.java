@@ -72,6 +72,7 @@ public class challenge extends AppCompatActivity {
         Button start_btn = (Button)dia.findViewById(R.id.start_button);
         Button giveup_btn = (Button)dia.findViewById(R.id.giveup_button);
         Button x = (Button) dia.findViewById(R.id.x);
+        dia.setCancelable(false);
 
         start_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,15 +84,13 @@ public class challenge extends AppCompatActivity {
         giveup_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), challenge.class);
-                startActivity(intent);
+                dia.dismiss();
             }
         });
         x.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), challenge.class);
-                startActivity(intent);
+                dia.dismiss();
             }
         });
     }

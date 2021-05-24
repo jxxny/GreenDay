@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#CCD1D1D1">
+    android:background="#80D1D1D1">
 
     <TextView
         android:id="@+id/popup"

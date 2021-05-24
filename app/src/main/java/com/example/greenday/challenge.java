@@ -1,12 +1,16 @@
 package com.example.greenday;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Rect;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
 
@@ -20,7 +24,7 @@ import java.util.ArrayList;
 
 public class challenge extends AppCompatActivity {
     RecyclerView recyclerView;
-    View dia;
+    Dialog dia;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +32,10 @@ public class challenge extends AppCompatActivity {
         setContentView(R.layout.challenge_activity);
 
         recyclerView = (RecyclerView)findViewById(R.id.recyclerView);
+        dia = new Dialog(challenge.this);
+        dia.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dia.setContentView(R.layout.challenge_popup);
+
 
         final ArrayList<Item> list = new ArrayList<>();
 
@@ -51,39 +59,41 @@ public class challenge extends AppCompatActivity {
         challenge_adapter.setOnMyTouchListener(new Challenge_Adapter.OnMyTouchListener() {
             @Override
             public void onTouch(View v, int pos) {
-                dia = (View) v.inflate(getApplicationContext(), R.layout.challenge_popup, null);
-                AlertDialog.Builder dlg = new AlertDialog.Builder(challenge.this);
-                dlg.setView(dia);
-                Button start_btn = (Button)dia.findViewById(R.id.start_button);
-                Button giveup_btn = (Button)dia.findViewById(R.id.giveup_button);
-                ImageView x = (ImageView)dia.findViewById(R.id.x);
-
-                start_btn.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(getApplicationContext(), challenge.class);
-                        startActivity(intent);
-                    }
-                });
-                giveup_btn.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(getApplicationContext(), challenge.class);
-                        startActivity(intent);
-                    }
-                });
-                x.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(getApplicationContext(), challenge.class);
-                        startActivity(intent);
-                    }
-                });
-                dlg.show();
+                showDialog();
             }
         });
         recyclerView.addItemDecoration(new MyItemDecoration(list));
 
+    }
+
+    public void showDialog(){
+        dia.show();
+        dia.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        Button start_btn = (Button)dia.findViewById(R.id.start_button);
+        Button giveup_btn = (Button)dia.findViewById(R.id.giveup_button);
+        Button x = (Button) dia.findViewById(R.id.x);
+
+        start_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), challenge.class);
+                startActivity(intent);
+            }
+        });
+        giveup_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), challenge.class);
+                startActivity(intent);
+            }
+        });
+        x.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), challenge.class);
+                startActivity(intent);
+            }
+        });
     }
 
     class MyItemDecoration extends RecyclerView.ItemDecoration{

@@ -19,7 +19,7 @@ import java.util.ArrayList;
 public class TestActivity extends AppCompatActivity {
 
     LinearLayout main_container;
-    Button button1, button2, button3;
+    ImageView button1, button2, button3, button4, button5;
     ChallengeFragment challengeFragment;
     RankFragment rankFragment;
     @Override
@@ -30,11 +30,14 @@ public class TestActivity extends AppCompatActivity {
 
         main_container = (LinearLayout)findViewById(R.id.main_container);
         ViewPager pager = (ViewPager)findViewById(R.id.view_pager);
-        button1 = (Button)findViewById(R.id.button);
-        button2 = (Button)findViewById(R.id.button2);
-        button3 = (Button)findViewById(R.id.button3);
+        button1 = (ImageView)findViewById(R.id.rank2);
+        button2 = (ImageView)findViewById(R.id.trash2);
+        button3 = (ImageView)findViewById(R.id.home2);
+        button4 = (ImageView)findViewById(R.id.shop2);
+        button5 = (ImageView)findViewById(R.id.user2);
 
-
+        MyPagerAdapter pagerAdapter =new MyPagerAdapter(getSupportFragmentManager());
+        pager.setAdapter(pagerAdapter);
 
     }
 

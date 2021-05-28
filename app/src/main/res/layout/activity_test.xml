@@ -6,72 +6,73 @@
     android:layout_height="match_parent"
     tools:context=".TestActivity">
 
+    <Button
+        android:id="@+id/rank"
+        android:layout_width="40dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/no_rank"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/trash"
+        android:layout_width="40dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/no_trash"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rank" />
+
+    <Button
+        android:id="@+id/home"
+        android:layout_width="40dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/no_home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/shop"
+        app:layout_constraintStart_toEndOf="@+id/trash" />
+
+    <Button
+        android:id="@+id/shop"
+        android:layout_width="40dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/no_shop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/user" />
+
+    <Button
+        android:id="@+id/user"
+        android:layout_width="40dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/no_user"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <ImageView
         android:id="@+id/bottom_img2"
         android:layout_width="411dp"
         android:layout_height="70dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/bottom_img" />
-
-    <ImageView
-        android:id="@+id/rank2"
-        android:layout_width="40dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginLeft="35dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/no_rank" />
-
-    <ImageView
-        android:id="@+id/trash2"
-        android:layout_width="40dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginLeft="35dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/rank2"
-        app:srcCompat="@drawable/no_trash" />
-
-    <ImageView
-        android:id="@+id/home2"
-        android:layout_width="40dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginLeft="35dp"
-        android:layout_marginEnd="35dp"
-        android:layout_marginRight="35dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/shop2"
-        app:layout_constraintStart_toEndOf="@+id/trash2"
-        app:srcCompat="@drawable/no_home" />
-
-    <ImageView
-        android:id="@+id/shop2"
-        android:layout_width="40dp"
-        android:layout_height="38dp"
-        android:layout_marginEnd="35dp"
-        android:layout_marginRight="35dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/user2"
-        app:srcCompat="@drawable/no_shop" />
-
-    <ImageView
-        android:id="@+id/user2"
-        android:layout_width="40dp"
-        android:layout_height="38dp"
-        android:layout_marginEnd="35dp"
-        android:layout_marginRight="35dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/no_user" />
 
     <LinearLayout
         android:id="@+id/main_container"

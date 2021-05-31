@@ -31,12 +31,11 @@ public class LoadingActivity extends AppCompatActivity {
         mImageDrawable = (ClipDrawable) img.getDrawable();
         textView = (TextView)findViewById(R.id.textView);
 
-        int i = 0;
-
             new Thread(new Runnable() {
                 @Override
                 public void run() {
                     final int[] per = {0};
+                    mImageDrawable.setLevel(mImageDrawable.getLevel() + 2500);
                     while(per[0] != 100){
                         try{
                             Thread.sleep(600);
@@ -51,7 +50,7 @@ public class LoadingActivity extends AppCompatActivity {
                                 per[0] += percent;
                                 if(per[0] > 100)
                                     per[0] = 100;
-                                mImageDrawable.setLevel(mImageDrawable.getLevel() + 100 * percent);
+                                mImageDrawable.setLevel(mImageDrawable.getLevel() + 75 * percent);
                                 textView.setText(per[0] + "%");
 
                             }

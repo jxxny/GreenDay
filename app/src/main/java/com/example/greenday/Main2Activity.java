@@ -21,6 +21,9 @@ public class Main2Activity extends AppCompatActivity {
     FragmentManager fragmentManager;
     ChallengeFragment challengeFragment;
     ShopFragment shopFragment;
+    HomeFragment homeFragment;
+    TrashFragment trashFragment;
+    UserFragment userFragment;
     FragmentTransaction ft;
 
     @Override
@@ -30,12 +33,18 @@ public class Main2Activity extends AppCompatActivity {
 
         rank = (Button)findViewById(R.id.rank);
         shop = (Button)findViewById(R.id.shop);
+        home = (Button)findViewById(R.id.home);
+        trash = (Button)findViewById(R.id.trash);
+        user = (Button)findViewById(R.id.user);
         mainontainer = (LinearLayout)findViewById(R.id.main_container);
 
         fragmentManager = getSupportFragmentManager();
 
         challengeFragment = new ChallengeFragment();
         shopFragment = new ShopFragment();
+        homeFragment = new HomeFragment();
+        trashFragment = new TrashFragment();
+        userFragment = new UserFragment();
 
         rank.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,6 +62,36 @@ public class Main2Activity extends AppCompatActivity {
                 ft = fragmentManager.beginTransaction();
                 ft.addToBackStack(null);
                 ft.replace(R.id.main_container, shopFragment);
+                ft.commit();
+            }
+        });
+
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ft = fragmentManager.beginTransaction();
+                ft.addToBackStack(null);
+                ft.replace(R.id.main_container, homeFragment);
+                ft.commit();
+            }
+        });
+
+        trash.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ft = fragmentManager.beginTransaction();
+                ft.addToBackStack(null);
+                ft.replace(R.id.main_container, trashFragment);
+                ft.commit();
+            }
+        });
+
+        user.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ft = fragmentManager.beginTransaction();
+                ft.addToBackStack(null);
+                ft.replace(R.id.main_container, userFragment);
                 ft.commit();
             }
         });

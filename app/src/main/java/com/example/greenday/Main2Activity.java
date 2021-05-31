@@ -46,6 +46,10 @@ public class Main2Activity extends AppCompatActivity {
         trashFragment = new TrashFragment();
         userFragment = new UserFragment();
 
+        ft = fragmentManager.beginTransaction();
+        ft.addToBackStack(null).replace(R.id.main_container,homeFragment).commit();
+
+
         rank.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

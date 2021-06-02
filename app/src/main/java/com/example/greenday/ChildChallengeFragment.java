@@ -28,7 +28,7 @@ import java.util.ArrayList;
  */
 public class ChildChallengeFragment extends Fragment {
     RecyclerView recyclerView;
-    ArrayList<Item> list = new ArrayList<>();
+    ArrayList<Item> list;
     Challenge_Adapter challenge_adapter;
     Challenge_DB challenge_db;
     Dialog dia;
@@ -50,6 +50,8 @@ public class ChildChallengeFragment extends Fragment {
         challenge_db = new Challenge_DB(getContext());
         SQLiteDatabase db = challenge_db.getReadableDatabase();
         Cursor cursor = db.rawQuery("select cha_type, cha_name, cha_intro from challenge", null);
+
+        list = new ArrayList<>();
 
         while(cursor.moveToNext()){
             Item item = new Item();

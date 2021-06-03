@@ -8,7 +8,9 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
+import android.graphics.Color;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -40,6 +42,7 @@ public class Main2Activity extends AppCompatActivity {
 
         fragmentManager = getSupportFragmentManager();
 
+
         challengeFragment = new ChallengeFragment();
         shopFragment = new ShopFragment();
         homeFragment = new HomeFragment();
@@ -49,10 +52,89 @@ public class Main2Activity extends AppCompatActivity {
         ft = fragmentManager.beginTransaction();
         ft.addToBackStack(null).replace(R.id.main_container,homeFragment).commit();
 
-
-        rank.setOnClickListener(new View.OnClickListener() {
+        rank.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View v) {
+            public boolean onTouch(View v, MotionEvent event) {
+                if(event.getAction() == MotionEvent.ACTION_DOWN){
+                    rank.setBackgroundColor(Color.TRANSPARENT);
+                    ft = fragmentManager.beginTransaction();
+                    ft.addToBackStack(null);
+                    ft.replace(R.id.main_container, challengeFragment);
+                    ft.commit();
+                }else{
+                    rank.setBackgroundResource(R.drawable.no_rank);
+                }
+                return false;
+            }
+        });
+
+        shop.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(event.getAction() == MotionEvent.ACTION_DOWN){
+                    shop.setBackgroundColor(Color.TRANSPARENT);
+                    ft = fragmentManager.beginTransaction();
+                    ft.addToBackStack(null);
+                    ft.replace(R.id.main_container, shopFragment);
+                    ft.commit();
+                }else{
+                    shop.setBackgroundResource(R.drawable.no_shop);
+                }
+                return false;
+            }
+        });
+
+        home.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(event.getAction() == MotionEvent.ACTION_DOWN){
+                    home.setBackgroundColor(Color.TRANSPARENT);
+                    ft = fragmentManager.beginTransaction();
+                    ft.addToBackStack(null);
+                    ft.replace(R.id.main_container, homeFragment);
+                    ft.commit();
+                }else{
+                    home.setBackgroundResource(R.drawable.no_home);
+                }
+                return false;
+            }
+        });
+
+        trash.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(event.getAction() == MotionEvent.ACTION_DOWN){
+                    trash.setBackgroundColor(Color.TRANSPARENT);
+                    ft = fragmentManager.beginTransaction();
+                    ft.addToBackStack(null);
+                    ft.replace(R.id.main_container, trashFragment);
+                    ft.commit();
+                }else{
+                    trash.setBackgroundResource(R.drawable.no_trash);
+                }
+                return false;
+            }
+        });
+
+        user.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(event.getAction() == MotionEvent.ACTION_DOWN){
+                    user.setBackgroundColor(Color.TRANSPARENT);
+                    ft = fragmentManager.beginTransaction();
+                    ft.addToBackStack(null);
+                    ft.replace(R.id.main_container, userFragment);
+                    ft.commit();
+                }else{
+                    user.setBackgroundResource(R.drawable.no_user);
+                }
+                return false;
+            }
+        });
+
+/*        rank.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { //랭크 프래그먼트
                 ft = fragmentManager.beginTransaction();
                 ft.addToBackStack(null);
                 ft.replace(R.id.main_container, challengeFragment);
@@ -62,7 +144,7 @@ public class Main2Activity extends AppCompatActivity {
 
         shop.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { //가게 위치 프래그먼트
                 ft = fragmentManager.beginTransaction();
                 ft.addToBackStack(null);
                 ft.replace(R.id.main_container, shopFragment);
@@ -72,7 +154,7 @@ public class Main2Activity extends AppCompatActivity {
 
         home.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { // 메인 프래그먼트
                 ft = fragmentManager.beginTransaction();
                 ft.addToBackStack(null);
                 ft.replace(R.id.main_container, homeFragment);
@@ -82,7 +164,7 @@ public class Main2Activity extends AppCompatActivity {
 
         trash.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { // 분리수거 프래그먼트
                 ft = fragmentManager.beginTransaction();
                 ft.addToBackStack(null);
                 ft.replace(R.id.main_container, trashFragment);
@@ -92,15 +174,25 @@ public class Main2Activity extends AppCompatActivity {
 
         user.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { // 유저 프래그먼트
                 ft = fragmentManager.beginTransaction();
                 ft.addToBackStack(null);
                 ft.replace(R.id.main_container, userFragment);
                 ft.commit();
             }
-        });
-
-
+        });*/
     }
 
+/*    @Override
+    public void onBackPressed() {
+        fragmentManager = getSupportFragmentManager();
+        Fragment parent = fragmentManager.findFragmentById(R.id.main_container);
+        if(parent != null){
+            if(parent.getChildFragmentManager().getBackStackEntryCount() > 0){
+                parent.getChildFragmentManager().popBackStack();
+            }else{
+                super.onBackPressed();
+            }
+        }
+    }*/
 }

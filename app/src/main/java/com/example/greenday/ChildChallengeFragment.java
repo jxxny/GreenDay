@@ -9,8 +9,10 @@ import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -19,6 +21,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import java.util.ArrayList;
 
@@ -27,11 +30,13 @@ import java.util.ArrayList;
  * A simple {@link Fragment} subclass.
  */
 public class ChildChallengeFragment extends Fragment {
+    public static final String TAG = "TAG_CHILD";
     RecyclerView recyclerView;
-    ArrayList<Item> list = new ArrayList<>();
+    ArrayList<Item> list;
     Challenge_Adapter challenge_adapter;
     Challenge_DB challenge_db;
     Dialog dia;
+    ImageView back;
     public ChildChallengeFragment() {
         // Required empty public constructor
     }
@@ -51,6 +56,7 @@ public class ChildChallengeFragment extends Fragment {
         SQLiteDatabase db = challenge_db.getReadableDatabase();
         Cursor cursor = db.rawQuery("select cha_type, cha_name, cha_intro from challenge", null);
 
+        list = new ArrayList<>();
         while(cursor.moveToNext()){
             Item item = new Item();
             item.type = cursor.getString(0);
@@ -69,22 +75,21 @@ public class ChildChallengeFragment extends Fragment {
             public void onTouch(View v, int pos) {
                 showDialog();
             }
-        });
+        }); // 리사이클러뷰 아이템을 클릭하므로써 다이얼로그 보여주기
 
-        recyclerView.addItemDecoration(new ChildChallengeFragment.MyItemDecoration(list));
+        recyclerView.addItemDecoration(new ChildChallengeFragment.MyItemDecoration(list)); // 리사이클러뷰 아이템 위치 수정
 
-
-
+        back = (ImageView)view.findViewById(R.id.back_img3);
         return view;
     }
 
     public void showDialog(){
-        dia.show();
-        dia.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        Button start_btn = (Button)dia.findViewById(R.id.start_button);
-        Button giveup_btn = (Button)dia.findViewById(R.id.giveup_button);
-        Button x = (Button) dia.findViewById(R.id.x);
-        dia.setCancelable(false);
+        dia.show(); // 다이얼로그 보여주기
+        dia.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT)); // 다이얼로그 사각형을 둥글게 하는 법
+        Button start_btn = (Button)dia.findViewById(R.id.start_button); // 시작 버튼
+        Button giveup_btn = (Button)dia.findViewById(R.id.giveup_button); // 포기 버튼
+        Button x = (Button) dia.findViewById(R.id.x); //  x 버튼
+        dia.setCancelable(false); // 바깥쪽으로 눌러도 나갈 수 없음
 
         start_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -128,5 +133,7 @@ public class ChildChallengeFragment extends Fragment {
             outRect.set(30, 15, 30, 15);
         }
     }
+
+
 
 }

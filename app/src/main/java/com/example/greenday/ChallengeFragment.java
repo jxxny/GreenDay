@@ -18,6 +18,7 @@ import java.util.ArrayList;
  * A simple {@link Fragment} subclass.
  */
 public class ChallengeFragment extends Fragment {
+    FragmentManager parenntFragmentManager;
     public ChallengeFragment() {
         // Required empty public constructor
     }
@@ -30,6 +31,7 @@ public class ChallengeFragment extends Fragment {
         ViewPager viewPager = (ViewPager)view.findViewById(R.id.viewPager);
         MyPagerAdapter pagerAdapter = new MyPagerAdapter(getChildFragmentManager());
         viewPager.setAdapter(pagerAdapter);
+
         return view;
     }
 

@@ -2,73 +2,66 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:background="@drawable/challenge">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80D1D1D1">
 
     <TextView
         android:id="@+id/popup"
-        android:layout_width="335dp"
+        android:layout_width="0dp"
         android:layout_height="274dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginLeft="57dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginRight="57dp"
         android:background="@drawable/challenge"
         android:fontFamily="@font/nanum_eb"
         android:gravity="center"
-        android:paddingBottom="170dp"
+        android:paddingBottom="160dp"
         android:text="챌린지에 도전하시겠습니까?"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498" />
+
+    <ImageView
+        android:id="@+id/x"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/popup"
+        app:layout_constraintTop_toTopOf="@+id/popup"
+        app:srcCompat="@drawable/x" />
 
     <Button
         android:id="@+id/start_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="60dp"
-        android:layout_marginRight="60dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
         android:background="@drawable/full_view_layout"
         android:elevation="5dp"
         android:fontFamily="@font/nanum"
         android:text="도전하기"
-        app:layout_constraintBottom_toBottomOf="@+id/popup"
-        app:layout_constraintEnd_toEndOf="@+id/popup"
-        app:layout_constraintTop_toTopOf="@+id/giveup_button" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/giveup_button"
+        app:layout_constraintEnd_toEndOf="@+id/popup" />
 
     <Button
         android:id="@+id/giveup_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="30dp"
         android:background="@drawable/chall_giveup_layout"
         android:elevation="5dp"
         android:text="포기하기"
         app:layout_constraintBottom_toBottomOf="@+id/popup"
         app:layout_constraintStart_toStartOf="@+id/popup" />
-
-    <Button
-        android:id="@+id/x"
-        android:layout_width="14dp"
-        android:layout_height="14dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:background="@drawable/x"
-        app:layout_constraintEnd_toEndOf="@+id/popup"
-        app:layout_constraintTop_toTopOf="@+id/popup" />
-
-    <TextView
-        android:id="@+id/popup_chall_intro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="챌린지 인트로"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.45" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

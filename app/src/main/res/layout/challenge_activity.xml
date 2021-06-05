@@ -36,55 +36,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="63dp"
-        android:layout_marginEnd="65dp"
-        android:layout_marginRight="65dp"
         android:fontFamily="@font/nanum"
-        android:text="챌린지에 도전하고 있습니다."
+        android:text="환경지킴이 그린데이가 여러분과 함께합니다."
         android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/user_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="85dp"
-        android:layout_marginLeft="85dp"
-        android:layout_marginTop="63dp"
-        android:fontFamily="@font/nanum"
-        android:text="사용자명"
-        android:textSize="13sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/user_name_next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:layout_marginLeft="2dp"
-        android:layout_marginTop="63dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp"
-        android:fontFamily="@font/nanum"
-        android:text="님은"
-        android:textSize="13sp"
-        app:layout_constraintEnd_toStartOf="@+id/challenge_count"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/user_name"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/challenge_count"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="63dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp"
-        android:fontFamily="@font/nanum"
-        android:text="nn일째"
-        android:textSize="13sp"
-        app:layout_constraintEnd_toStartOf="@+id/challenge_count_next"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView

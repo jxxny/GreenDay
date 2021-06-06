@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RankFragment">
+    tools:context=".RankFragment"
+    android:background="@drawable/rank_gradient">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="490dp">
+        android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/back_img"
@@ -16,21 +17,43 @@
             android:layout_height="28dp"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="22dp"
-            android:src="@drawable/g_arrow"
+            android:layout_marginTop="28dp"
+            android:src="@drawable/gg_arrow"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/rank_title"
+            android:id="@+id/title1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="n월 n주차 랭킹"
+            android:fontFamily="@font/nanum"
+            android:text="Green Day"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:fontFamily="@font/nanum_eb"
+            android:text="2021년도 6월 랭킹"
+            android:textSize="23sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title1" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="434dp"
+            android:layout_height="77dp"
+            android:src="@drawable/bottom_img"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

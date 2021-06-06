@@ -53,98 +53,8 @@ public class Main2Activity extends AppCompatActivity {
         home.setBackgroundResource(R.drawable.home);
         ft.addToBackStack(null).replace(R.id.main_container,homeFragment).commit();
 
-// 터치로 프래그먼트 이동
-/*        rank.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if(event.getAction() == MotionEvent.ACTION_DOWN){
-                    rank.setBackgroundResource(R.drawable.rank);
-                    shop.setBackgroundResource(R.drawable.no_shop);
-                    home.setBackgroundResource(R.drawable.no_home);
-                    trash.setBackgroundResource(R.drawable.no_trash);
-                    user.setBackgroundResource(R.drawable.no_user);
-                    ft = fragmentManager.beginTransaction();
-                    ft.addToBackStack(null);
-                    ft.replace(R.id.main_container, challengeFragment);
-                    ft.commit();
-                }
-                return false;
-            }
-        });
-
-        shop.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if(event.getAction() == MotionEvent.ACTION_DOWN){
-                    shop.setBackgroundResource(R.drawable.shop);
-                    rank.setBackgroundResource(R.drawable.no_rank);
-                    home.setBackgroundResource(R.drawable.no_home);
-                    trash.setBackgroundResource(R.drawable.no_trash);
-                    user.setBackgroundResource(R.drawable.no_user);
-                    ft = fragmentManager.beginTransaction();
-                    ft.addToBackStack(null);
-                    ft.replace(R.id.main_container, shopFragment);
-                    ft.commit();
-                }
-                return false;
-            }
-        });
-
-        home.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if(event.getAction() == MotionEvent.ACTION_DOWN){
-                    home.setBackgroundResource(R.drawable.home);
-                    rank.setBackgroundResource(R.drawable.no_rank);
-                    shop.setBackgroundResource(R.drawable.no_shop);
-                    trash.setBackgroundResource(R.drawable.no_trash);
-                    user.setBackgroundResource(R.drawable.no_user);
-                    ft = fragmentManager.beginTransaction();
-                    ft.addToBackStack(null);
-                    ft.replace(R.id.main_container, homeFragment);
-                    ft.commit();
-                }
-                return false;
-            }
-        });
-
-        trash.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if(event.getAction() == MotionEvent.ACTION_DOWN){
-                    trash.setBackgroundResource(R.drawable.trash);
-                    rank.setBackgroundResource(R.drawable.no_rank);
-                    shop.setBackgroundResource(R.drawable.no_shop);
-                    home.setBackgroundResource(R.drawable.no_home);
-                    user.setBackgroundResource(R.drawable.no_user);
-                    ft = fragmentManager.beginTransaction();
-                    ft.addToBackStack(null);
-                    ft.replace(R.id.main_container, trashFragment);
-                    ft.commit();
-                }
-                return false;
-            }
-        });
-
-        user.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if(event.getAction() == MotionEvent.ACTION_DOWN){
-                    user.setBackgroundResource(R.drawable.user);
-                    rank.setBackgroundResource(R.drawable.no_rank);
-                    shop.setBackgroundResource(R.drawable.no_shop);
-                    home.setBackgroundResource(R.drawable.no_home);
-                    trash.setBackgroundResource(R.drawable.no_trash);
-                    ft = fragmentManager.beginTransaction();
-                    ft.addToBackStack(null);
-                    ft.replace(R.id.main_container, userFragment);
-                    ft.commit();
-                }
-                return false;
-            }
-        });*/
 // 클릭으로 프래그먼트 이동
-/*        rank.setOnClickListener(new View.OnClickListener() {
+        rank.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) { //랭크 프래그먼트
                     rank.setBackgroundResource(R.drawable.rank);
@@ -217,7 +127,7 @@ public class Main2Activity extends AppCompatActivity {
                 ft.replace(R.id.main_container, userFragment);
                 ft.commit();
             }
-        });*/
+        });
     }
 
 /*    @Override

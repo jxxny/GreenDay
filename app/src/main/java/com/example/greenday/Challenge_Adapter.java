@@ -56,10 +56,9 @@ public class Challenge_Adapter extends RecyclerView.Adapter<Challenge_Adapter.My
         if (holder.type.getText().equals("다같이 챌린지"))
             imageView.setImageResource(R.drawable.together);
 
-        if (holder.type.getText().equals("탄소발자국 줄이기 챌린지")) {
+        if (holder.type.getText().equals("탄소발자국 줄이기 챌린지"))
             imageView.setImageResource(R.drawable.carbon);
-        }
-
+        
         if (holder.type.getText().equals("단체와 함께해요"))
             imageView.setImageResource(R.drawable.government);
     }

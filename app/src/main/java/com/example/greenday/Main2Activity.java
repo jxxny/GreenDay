@@ -58,11 +58,11 @@ public class Main2Activity extends AppCompatActivity {
         rank.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) { //랭크 프래그먼트
-                    rank.setBackgroundResource(R.drawable.rank);
-                    shop.setBackgroundResource(R.drawable.no_shop);
-                    home.setBackgroundResource(R.drawable.no_home);
-                    trash.setBackgroundResource(R.drawable.no_trash);
-                    user.setBackgroundResource(R.drawable.no_user);
+                rank.setBackgroundResource(R.drawable.rank);
+                shop.setBackgroundResource(R.drawable.no_shop);
+                home.setBackgroundResource(R.drawable.no_home);
+                trash.setBackgroundResource(R.drawable.no_trash);
+                user.setBackgroundResource(R.drawable.no_user);
                 ft = fragmentManager.beginTransaction();
                 ft.addToBackStack(null);
                 ft.replace(R.id.main_container, challengeFragment);
@@ -73,11 +73,11 @@ public class Main2Activity extends AppCompatActivity {
         shop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) { //가게 위치 프래그먼트
-                    shop.setBackgroundResource(R.drawable.shop);
-                    rank.setBackgroundResource(R.drawable.no_rank);
-                    home.setBackgroundResource(R.drawable.no_home);
-                    trash.setBackgroundResource(R.drawable.no_trash);
-                    user.setBackgroundResource(R.drawable.no_user);
+                shop.setBackgroundResource(R.drawable.shop);
+                rank.setBackgroundResource(R.drawable.no_rank);
+                home.setBackgroundResource(R.drawable.no_home);
+                trash.setBackgroundResource(R.drawable.no_trash);
+                user.setBackgroundResource(R.drawable.no_user);
                 ft = fragmentManager.beginTransaction();
                 ft.addToBackStack(null);
                 ft.replace(R.id.main_container, shopFragment);
@@ -88,11 +88,11 @@ public class Main2Activity extends AppCompatActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) { // 메인 프래그먼트
-                    home.setBackgroundResource(R.drawable.home);
-                    rank.setBackgroundResource(R.drawable.no_rank);
-                    shop.setBackgroundResource(R.drawable.no_shop);
-                    trash.setBackgroundResource(R.drawable.no_trash);
-                    user.setBackgroundResource(R.drawable.no_user);
+                home.setBackgroundResource(R.drawable.home);
+                rank.setBackgroundResource(R.drawable.no_rank);
+                shop.setBackgroundResource(R.drawable.no_shop);
+                trash.setBackgroundResource(R.drawable.no_trash);
+                user.setBackgroundResource(R.drawable.no_user);
                 ft = fragmentManager.beginTransaction();
                 ft.addToBackStack(null);
                 ft.replace(R.id.main_container, homeFragment);
@@ -103,11 +103,11 @@ public class Main2Activity extends AppCompatActivity {
         trash.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) { // 분리수거 프래그먼트
-                                trash.setBackgroundResource(R.drawable.trash);
-                    rank.setBackgroundResource(R.drawable.no_rank);
-                    shop.setBackgroundResource(R.drawable.no_shop);
-                    home.setBackgroundResource(R.drawable.no_home);
-                    user.setBackgroundResource(R.drawable.no_user);
+                trash.setBackgroundResource(R.drawable.trash);
+                rank.setBackgroundResource(R.drawable.no_rank);
+                shop.setBackgroundResource(R.drawable.no_shop);
+                home.setBackgroundResource(R.drawable.no_home);
+                user.setBackgroundResource(R.drawable.no_user);
                 ft = fragmentManager.beginTransaction();
                 ft.addToBackStack(null);
                 ft.replace(R.id.main_container, trashFragment);
@@ -118,11 +118,11 @@ public class Main2Activity extends AppCompatActivity {
         user.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) { // 유저 프래그먼트
-                                user.setBackgroundResource(R.drawable.user);
-                    rank.setBackgroundResource(R.drawable.no_rank);
-                    shop.setBackgroundResource(R.drawable.no_shop);
-                    home.setBackgroundResource(R.drawable.no_home);
-                    trash.setBackgroundResource(R.drawable.no_trash);
+                user.setBackgroundResource(R.drawable.user);
+                rank.setBackgroundResource(R.drawable.no_rank);
+                shop.setBackgroundResource(R.drawable.no_shop);
+                home.setBackgroundResource(R.drawable.no_home);
+                trash.setBackgroundResource(R.drawable.no_trash);
                 ft = fragmentManager.beginTransaction();
                 ft.addToBackStack(null);
                 ft.replace(R.id.main_container, userFragment);

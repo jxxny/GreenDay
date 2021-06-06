@@ -18,7 +18,6 @@ import java.util.ArrayList;
  * A simple {@link Fragment} subclass.
  */
 public class ChallengeFragment extends Fragment {
-    FragmentManager parenntFragmentManager;
     public ChallengeFragment() {
         // Required empty public constructor
     }

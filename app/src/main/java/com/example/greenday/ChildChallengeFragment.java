@@ -70,12 +70,12 @@ public class ChildChallengeFragment extends Fragment {
         challenge_adapter = new Challenge_Adapter(list);
         recyclerView.setAdapter(challenge_adapter);
 
-        challenge_adapter.setOnMyTouchListener(new Challenge_Adapter.OnMyTouchListener() {
+/*        challenge_adapter.setOnMyTouchListener(new Challenge_Adapter.OnMyTouchListener() {
             @Override
             public void onTouch(View v, int pos) {
                 showDialog();
             }
-        }); // 리사이클러뷰 아이템을 클릭하므로써 다이얼로그 보여주기
+        }); // 리사이클러뷰 아이템을 클릭하므로써 다이얼로그 보여주기*/
 
         recyclerView.addItemDecoration(new ChildChallengeFragment.MyItemDecoration(list)); // 리사이클러뷰 아이템 위치 수정
 
@@ -83,12 +83,12 @@ public class ChildChallengeFragment extends Fragment {
         return view;
     }
 
-    public void showDialog(){
+/*    public void showDialog(){
         dia.show(); // 다이얼로그 보여주기
         dia.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT)); // 다이얼로그 사각형을 둥글게 하는 법
         Button start_btn = (Button)dia.findViewById(R.id.start_button); // 시작 버튼
         Button giveup_btn = (Button)dia.findViewById(R.id.giveup_button); // 포기 버튼
-        Button x = (Button) dia.findViewById(R.id.x); //  x 버튼
+        ImageView x = (ImageView) dia.findViewById(R.id.x); //  x 버튼
         dia.setCancelable(false); // 바깥쪽으로 눌러도 나갈 수 없음
 
         start_btn.setOnClickListener(new View.OnClickListener() {
@@ -109,7 +109,7 @@ public class ChildChallengeFragment extends Fragment {
                 dia.dismiss();
             }
         });
-    }
+    }*/
 
     class MyItemDecoration extends RecyclerView.ItemDecoration{
         public MyItemDecoration(ArrayList<Item> list) {

@@ -53,6 +53,7 @@ public class Main2Activity extends AppCompatActivity {
         home.setBackgroundResource(R.drawable.home);
         ft.addToBackStack(null).replace(R.id.main_container,homeFragment).commit();
 
+
 // 클릭으로 프래그먼트 이동
         rank.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -129,17 +130,4 @@ public class Main2Activity extends AppCompatActivity {
             }
         });
     }
-
-/*    @Override
-    public void onBackPressed() {
-        fragmentManager = getSupportFragmentManager();
-        Fragment parent = fragmentManager.findFragmentById(R.id.main_container);
-        if(parent != null){
-            if(parent.getChildFragmentManager().getBackStackEntryCount() > 0){
-                parent.getChildFragmentManager().popBackStack();
-            }else{
-                super.onBackPressed();
-            }
-        }
-    }*/
 }

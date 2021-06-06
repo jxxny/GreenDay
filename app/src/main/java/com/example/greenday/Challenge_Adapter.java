@@ -18,18 +18,22 @@ public class Challenge_Adapter extends RecyclerView.Adapter<Challenge_Adapter.My
     public ArrayList<Item> list;
     public OnMyTouchListener listener = null;
 
-    public Challenge_Adapter(ArrayList<Item> list){this.list = list;}
+    public Challenge_Adapter(ArrayList<Item> list) {
+        this.list = list;
+    }
 
-    public interface OnMyTouchListener{
+    public interface OnMyTouchListener {
         void onTouch(View v, int pos);
     }
 
-    public void setOnMyTouchListener(OnMyTouchListener listener){this.listener = listener;}
+    public void setOnMyTouchListener(OnMyTouchListener listener) {
+        this.listener = listener;
+    }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.challenge_list,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.challenge_list, parent, false);
         return new MyViewHolder(view);
     }
 
@@ -39,25 +43,25 @@ public class Challenge_Adapter extends RecyclerView.Adapter<Challenge_Adapter.My
         holder.type.setText(item.type);
         holder.name.setText(item.name);
         holder.intro.setText(item.intro);
-        ImageView imageView = (ImageView)holder.image;
+        ImageView imageView = (ImageView) holder.image;
 
         ViewGroup.LayoutParams params = imageView.getLayoutParams();
         params.width = 150;
         params.height = 150;
         imageView.setLayoutParams(params);
 
-        if(holder.type.getText().equals("용기"))
-            imageView.setImageResource(R.drawable.salad);
+        if (holder.type.getText().equals("해시태그 챌린지"))
+            imageView.setImageResource(R.drawable.hashtag);
 
-        if(holder.type.getText().equals("대중교통"))
-            imageView.setImageResource(R.drawable.bus);
+        if (holder.type.getText().equals("다같이 챌린지"))
+            imageView.setImageResource(R.drawable.together);
 
-        if(holder.type.getText().equals("텀블러")) {
-            imageView.setImageResource(R.drawable.re_tumbler);
+        if (holder.type.getText().equals("탄소발자국 줄이기 챌린지")) {
+            imageView.setImageResource(R.drawable.carbon);
         }
 
-        if(holder.type.getText().equals("쓰레기"))
-            imageView.setImageResource(R.drawable.trash2);
+        if (holder.type.getText().equals("단체와 함께해요"))
+            imageView.setImageResource(R.drawable.government);
     }
 
     @Override
@@ -82,7 +86,7 @@ public class Challenge_Adapter extends RecyclerView.Adapter<Challenge_Adapter.My
                 @Override
                 public void onClick(View v) {
                     int pos = getAbsoluteAdapterPosition();
-                    if(listener != null)
+                    if (listener != null)
                         listener.onTouch(v, pos);
                 }
             });

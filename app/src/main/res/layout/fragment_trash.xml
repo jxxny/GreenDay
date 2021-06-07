@@ -9,12 +9,12 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="580dp"
         android:background="#FFFFFF">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:background="#FFFFFF">
 
             <ImageView
@@ -34,14 +34,12 @@
                 android:id="@+id/recycle_banner1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="26dp"
-                android:layout_marginBottom="281dp"
+                android:layout_marginTop="32dp"
                 android:fontFamily="@font/nanum_eb"
                 android:gravity="center"
                 android:text="분리배출에 대해"
                 android:textColor="#000000"
                 android:textSize="24sp"
-                app:layout_constraintBottom_toTopOf="@+id/general_button"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -50,18 +48,17 @@
                 android:id="@+id/recycle_banner2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="60dp"
-                android:layout_marginLeft="60dp"
-                android:layout_marginTop="67dp"
-                android:layout_marginBottom="66dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
                 android:fontFamily="@font/nanum_eb"
                 android:gravity="center"
                 android:text="얼마나 자세히 알고 계신가요?"
                 android:textColor="#000000"
                 android:textSize="24sp"
-                app:layout_constraintBottom_toTopOf="@+id/recycle_img"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/recycle_banner1" />
 
             <ImageView
                 android:id="@+id/recycle_img"
@@ -69,7 +66,7 @@
                 android:layout_height="60dp"
                 android:layout_marginStart="32dp"
                 android:layout_marginLeft="32dp"
-                android:layout_marginTop="64dp"
+                android:layout_marginTop="50dp"
                 android:src="@drawable/trash1"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/recycle_banner2" />
@@ -80,7 +77,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="70dp"
+                android:layout_marginTop="57dp"
                 android:fontFamily="@font/nanum_eb"
                 android:text="분리배출, 이렇게 버리세요!"
                 android:textColor="#000000"
@@ -94,12 +91,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="192dp"
+                android:layout_marginBottom="219dp"
                 android:fontFamily="@font/nanum_eb"
                 android:text="헷갈리기만 했던 분리배출 이제 어렵지 않습니다"
                 android:textColor="#000000"
+                app:layout_constraintBottom_toTopOf="@+id/recyclequizplus_img"
                 app:layout_constraintStart_toEndOf="@+id/recycle_img"
-                app:layout_constraintTop_toBottomOf="@+id/recycleway_text1" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/recyclequiz_img"
@@ -226,6 +225,41 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/vinyl_button"
                 app:layout_constraintTop_toBottomOf="@+id/plastic_button" />
+
+            <ImageView
+                android:id="@+id/recyclequizplus_img"
+                android:layout_width="20dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="43dp"
+                android:layout_marginRight="43dp"
+                android:layout_marginBottom="281dp"
+                android:src="@drawable/plus"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recycleway_text2" />
+
+            <Button
+                android:id="@+id/recyclequiz_button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="38dp"
+                android:layout_marginLeft="38dp"
+                android:layout_marginTop="16dp"
+                android:background="#FFFFFF"
+                android:text="Question1"
+                android:textColor="#000000"
+                app:layout_constraintStart_toStartOf="@+id/recyclequiz_img"
+                app:layout_constraintTop_toBottomOf="@+id/recyclequiz_img" />
+
+            <Button
+                android:id="@+id/recyclequiz_button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="#FFFFFF"
+                android:text="Question2"
+                app:layout_constraintStart_toStartOf="@+id/recyclequiz_button1"
+                app:layout_constraintTop_toBottomOf="@+id/recyclequiz_button1" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

@@ -67,7 +67,7 @@ public class join extends AppCompatActivity {
                 matcher = pattern.matcher(pwd);
                 if(matcher.find() && pwd.equals(repwd)){
                     setImage.setImageResource(R.drawable.checkicon);
-                } else if(repwd.equals("") && pwd.equals("")){
+                } else if(repwd.equals("")){
                     setImage.setImageResource(R.drawable.setimage);
                 }
                 else{
@@ -95,7 +95,7 @@ public class join extends AppCompatActivity {
 
                 if(matcher.find() && pwd.equals(repwd)){
                     setImage.setImageResource(R.drawable.checkicon);
-                }else if(repwd.equals("") && pwd.equals("")){
+                }else if(repwd.equals("")){
                     setImage.setImageResource(R.drawable.setimage);
                 }
                 else{

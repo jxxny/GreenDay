@@ -1,6 +1,8 @@
 package com.example.greenday;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -65,14 +67,19 @@ public class join extends AppCompatActivity {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 String pwd = insert_pwd.getText().toString();
                 String repwd = insert_repwd.getText().toString();
+                Bitmap bitmap1 = BitmapFactory.decodeResource(getResources(), R.drawable.check);
+                Bitmap bitmap2 = BitmapFactory.decodeResource(getResources(), R.drawable.close_icon);
+                bitmap1 = Bitmap.createScaledBitmap(bitmap1, 50, 50, true);
+                bitmap2 = Bitmap.createScaledBitmap(bitmap2, 50, 50, true);
+
                 matcher = pattern.matcher(pwd);
                 if(matcher.find() && pwd.equals(repwd)){
-                    setImage.setImageResource(R.drawable.check);
-                } else if(repwd.equals("") && pwd.equals("")){
+                    setImage.setImageBitmap(bitmap1);
+                } else if(repwd.equals("")){
                     setImage.setImageResource(R.drawable.setimage);
                 }
                 else{
-                    setImage.setImageResource(R.drawable.close_icon);
+                    setImage.setImageBitmap(bitmap2);
                 }
 
             }
@@ -92,15 +99,20 @@ public class join extends AppCompatActivity {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 String pwd = insert_pwd.getText().toString();
                 String repwd = insert_repwd.getText().toString();
+                Bitmap bitmap1 = BitmapFactory.decodeResource(getResources(), R.drawable.check);
+                Bitmap bitmap2 = BitmapFactory.decodeResource(getResources(), R.drawable.close_icon);
+                bitmap1 = Bitmap.createScaledBitmap(bitmap1, 50, 50, true);
+                bitmap2 = Bitmap.createScaledBitmap(bitmap2, 50, 50, true);
+
                 matcher = pattern.matcher(pwd);
 
                 if(matcher.find() && pwd.equals(repwd)){
-                    setImage.setImageResource(R.drawable.check);
-                }else if(repwd.equals("") && pwd.equals("")){
+                    setImage.setImageBitmap(bitmap1);
+                }else if(repwd.equals("")){
                     setImage.setImageResource(R.drawable.setimage);
                 }
                 else{
-                    setImage.setImageResource(R.drawable.close_icon);
+                    setImage.setImageBitmap(bitmap2);
                 }
             }
 

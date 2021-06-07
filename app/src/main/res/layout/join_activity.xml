@@ -64,7 +64,7 @@
         android:id="@+id/back_arrow"
         android:layout_width="22dp"
         android:layout_height="28dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="26dp"
         app:layout_constraintEnd_toStartOf="@+id/join_title"
         app:layout_constraintHorizontal_bias="0.125"
         app:layout_constraintStart_toStartOf="parent"

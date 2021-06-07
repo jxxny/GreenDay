@@ -91,14 +91,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="192dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginBottom="219dp"
                 android:fontFamily="@font/nanum_eb"
                 android:text="헷갈리기만 했던 분리배출 이제 어렵지 않습니다"
                 android:textColor="#000000"
                 app:layout_constraintBottom_toTopOf="@+id/recyclequizplus_img"
                 app:layout_constraintStart_toEndOf="@+id/recycle_img"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/recycleway_text1" />
 
             <ImageView
                 android:id="@+id/recyclequiz_img"
@@ -138,16 +138,19 @@
                 app:layout_constraintStart_toEndOf="@+id/recyclequiz_img"
                 app:layout_constraintTop_toBottomOf="@+id/recyclequiz_text1" />
 
-            <Button
+            <ImageView
+                android:src="@drawable/paper"
+                android:elevation="5dp"
                 android:id="@+id/paper_button"
                 android:layout_width="90dp"
                 android:layout_height="70dp"
                 android:layout_marginStart="24dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="16dp"
-                android:background="@drawable/paper"
+                android:background="@drawable/stroke_no_layout"
                 android:fontFamily="@font/nanum_eb"
                 android:text="종이류"
+                android:textSize="18sp"
                 app:layout_constraintEnd_toStartOf="@+id/can_button"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/recycleway_text2" />
@@ -164,6 +167,7 @@
                 android:background="@drawable/can"
                 android:fontFamily="@font/nanum_eb"
                 android:text="캔/고철"
+                android:textSize="18sp"
                 app:layout_constraintEnd_toStartOf="@+id/plastic_button"
                 app:layout_constraintStart_toEndOf="@+id/paper_button"
                 app:layout_constraintTop_toBottomOf="@+id/recycleway_text2" />
@@ -178,6 +182,7 @@
                 android:background="@drawable/plastic"
                 android:fontFamily="@font/nanum_eb"
                 android:text="플라스틱"
+                android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/can_button"
                 app:layout_constraintTop_toBottomOf="@+id/recycleway_text2" />
@@ -192,6 +197,7 @@
                 android:background="@drawable/glass"
                 android:fontFamily="@font/nanum_eb"
                 android:text="유리병류"
+                android:textSize="18sp"
                 app:layout_constraintEnd_toStartOf="@+id/vinyl_button"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/paper_button" />
@@ -208,6 +214,7 @@
                 android:background="@drawable/vinyl"
                 android:fontFamily="@font/nanum_eb"
                 android:text="비닐류"
+                android:textSize="18sp"
                 app:layout_constraintEnd_toStartOf="@+id/general_button"
                 app:layout_constraintStart_toEndOf="@+id/glass_button"
                 app:layout_constraintTop_toBottomOf="@+id/plastic_button" />
@@ -222,6 +229,7 @@
                 android:background="@drawable/general"
                 android:fontFamily="@font/nanum_eb"
                 android:text="일반 쓰레기"
+                android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/vinyl_button"
                 app:layout_constraintTop_toBottomOf="@+id/plastic_button" />
@@ -260,8 +268,6 @@
                 android:text="Question2"
                 app:layout_constraintStart_toStartOf="@+id/recyclequiz_button1"
                 app:layout_constraintTop_toBottomOf="@+id/recyclequiz_button1" />
-
-
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </FrameLayout>

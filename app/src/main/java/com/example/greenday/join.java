@@ -66,12 +66,12 @@ public class join extends AppCompatActivity {
                 String repwd = insert_repwd.getText().toString();
                 matcher = pattern.matcher(pwd);
                 if(matcher.find() && pwd.equals(repwd)){
-                    setImage.setImageResource(R.drawable.checkicon);
+                    setImage.setImageResource(R.drawable.check);
                 } else if(repwd.equals("") && pwd.equals("")){
                     setImage.setImageResource(R.drawable.setimage);
                 }
                 else{
-                    setImage.setImageResource(R.drawable.xicon);
+                    setImage.setImageResource(R.drawable.close_icon);
                 }
 
             }
@@ -94,12 +94,12 @@ public class join extends AppCompatActivity {
                 matcher = pattern.matcher(pwd);
 
                 if(matcher.find() && pwd.equals(repwd)){
-                    setImage.setImageResource(R.drawable.checkicon);
+                    setImage.setImageResource(R.drawable.check);
                 }else if(repwd.equals("") && pwd.equals("")){
                     setImage.setImageResource(R.drawable.setimage);
                 }
                 else{
-                    setImage.setImageResource(R.drawable.xicon);
+                    setImage.setImageResource(R.drawable.close_icon);
                 }
             }
 

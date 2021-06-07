@@ -13,11 +13,23 @@
 
         <ImageView
             android:id="@+id/imageView8"
-            android:layout_width="123dp"
-            android:layout_height="133dp"
-            android:layout_marginTop="130dp"
+            android:layout_width="113dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="150dp"
+            android:elevation="5dp"
             android:src="@drawable/rank_back"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/back_img"
+            android:layout_width="22dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="28dp"
+            android:src="@drawable/gg_arrow"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -33,28 +45,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="341dp"
-            android:layout_height="422dp"
-            android:layout_marginBottom="2dp"
-            android:elevation="5dp"
-            android:src="@drawable/rank_background"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.699" />
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="434dp"
-            android:layout_height="77dp"
-            android:src="@drawable/bottom_img"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
         <TextView
             android:id="@+id/title2"
             android:layout_width="wrap_content"
@@ -68,15 +58,26 @@
             app:layout_constraintTop_toBottomOf="@+id/title1" />
 
         <ImageView
-            android:id="@+id/back_img"
-            android:layout_width="22dp"
-            android:layout_height="28dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="28dp"
-            android:src="@drawable/gg_arrow"
+            android:id="@+id/imageView4"
+            android:layout_width="434dp"
+            android:layout_height="77dp"
+            android:src="@drawable/bottom_img"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="341dp"
+            android:layout_height="422dp"
+            android:layout_marginBottom="2dp"
+            android:src="@drawable/rank_background"
+            android:elevation="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.699" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

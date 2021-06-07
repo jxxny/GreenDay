@@ -66,12 +66,12 @@ public class join extends AppCompatActivity {
                 String repwd = insert_repwd.getText().toString();
                 matcher = pattern.matcher(pwd);
                 if(matcher.find() && pwd.equals(repwd)){
-                    setImage.setImageResource(R.drawable.checkicon);
+                    setImage.setImageResource(R.drawable.check); //아이디와 비밀번호가 매치될때
                 } else if(repwd.equals("") && pwd.equals("")){
                     setImage.setImageResource(R.drawable.setimage);
                 }
                 else{
-                    setImage.setImageResource(R.drawable.xicon);
+                    setImage.setImageResource(R.drawable.close_icon); //아이디와 비밀번호가 매치되지 않을때
                 }
 
             }

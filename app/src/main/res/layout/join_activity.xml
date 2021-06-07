@@ -266,5 +266,16 @@
         app:layout_constraintTop_toBottomOf="@+id/insert_repwd"
         app:srcCompat="@drawable/waste" />
 
+    <ImageView
+        android:id="@+id/setImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/insert_repwd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/insert_repwd"
+        app:srcCompat="@drawable/setimage" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

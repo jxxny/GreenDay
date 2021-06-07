@@ -1,5 +1,6 @@
 package com.example.greenday;
 
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -16,6 +17,14 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 import java.util.ArrayList;
+
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+
+import android.os.Bundle;
+import android.widget.Button;
+import android.widget.LinearLayout;
 
 public class Main2Activity extends AppCompatActivity {
     Button rank, trash, home, shop, user;

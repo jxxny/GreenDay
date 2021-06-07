@@ -9,13 +9,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class TrashFragment extends Fragment {
-    Button paper_button;
+    ImageView paper_button;
 
     public TrashFragment() {
         // Required empty public constructor
@@ -28,14 +29,15 @@ public class TrashFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_trash, container, false);
 
-        paper_button = (Button)view.findViewById(R.id.paper_button);
+        paper_button = (ImageView)view.findViewById(R.id.paper_button);
 
         paper_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), join.class);
+                Intent intent = new Intent(getActivity(), join.class);
                 startActivity(intent);
             }
         });
+        return view;
     }
 }

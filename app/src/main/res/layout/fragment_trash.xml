@@ -14,12 +14,13 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="#FFFFFF">
 
             <ImageView
                 android:id="@+id/back_img"
                 android:layout_width="22dp"
-                android:layout_height="0dp"
+                android:layout_height="28dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="28dp"
@@ -33,12 +34,14 @@
                 android:id="@+id/recycle_banner1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginBottom="281dp"
                 android:fontFamily="@font/nanum_eb"
                 android:gravity="center"
                 android:text="분리배출에 대해"
                 android:textColor="#000000"
                 android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@+id/general_button"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -66,12 +69,8 @@
                 android:layout_height="60dp"
                 android:layout_marginStart="32dp"
                 android:layout_marginLeft="32dp"
-                android:layout_marginEnd="39dp"
-                android:layout_marginRight="39dp"
-                android:layout_marginBottom="506dp"
+                android:layout_marginTop="64dp"
                 android:src="@drawable/trash1"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/recycleway_text1"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/recycle_banner2" />
 
@@ -139,6 +138,94 @@
                 android:textColor="#000000"
                 app:layout_constraintStart_toEndOf="@+id/recyclequiz_img"
                 app:layout_constraintTop_toBottomOf="@+id/recyclequiz_text1" />
+
+            <Button
+                android:id="@+id/paper_button"
+                android:layout_width="90dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/paper"
+                android:fontFamily="@font/nanum_eb"
+                android:text="종이류"
+                app:layout_constraintEnd_toStartOf="@+id/can_button"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recycleway_text2" />
+
+            <Button
+                android:id="@+id/can_button"
+                android:layout_width="90dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/can"
+                android:fontFamily="@font/nanum_eb"
+                android:text="캔/고철"
+                app:layout_constraintEnd_toStartOf="@+id/plastic_button"
+                app:layout_constraintStart_toEndOf="@+id/paper_button"
+                app:layout_constraintTop_toBottomOf="@+id/recycleway_text2" />
+
+            <Button
+                android:id="@+id/plastic_button"
+                android:layout_width="90dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/plastic"
+                android:fontFamily="@font/nanum_eb"
+                android:text="플라스틱"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/can_button"
+                app:layout_constraintTop_toBottomOf="@+id/recycleway_text2" />
+
+            <Button
+                android:id="@+id/glass_button"
+                android:layout_width="90dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/glass"
+                android:fontFamily="@font/nanum_eb"
+                android:text="유리병류"
+                app:layout_constraintEnd_toStartOf="@+id/vinyl_button"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/paper_button" />
+
+            <Button
+                android:id="@+id/vinyl_button"
+                android:layout_width="90dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/vinyl"
+                android:fontFamily="@font/nanum_eb"
+                android:text="비닐류"
+                app:layout_constraintEnd_toStartOf="@+id/general_button"
+                app:layout_constraintStart_toEndOf="@+id/glass_button"
+                app:layout_constraintTop_toBottomOf="@+id/plastic_button" />
+
+            <Button
+                android:id="@+id/general_button"
+                android:layout_width="90dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/general"
+                android:fontFamily="@font/nanum_eb"
+                android:text="일반 쓰레기"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/vinyl_button"
+                app:layout_constraintTop_toBottomOf="@+id/plastic_button" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

@@ -33,12 +33,12 @@ public class Main2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        rank = (Button)findViewById(R.id.rank);
-        shop = (Button)findViewById(R.id.shop);
-        home = (Button)findViewById(R.id.home);
-        trash = (Button)findViewById(R.id.trash);
-        user = (Button)findViewById(R.id.user);
-        mainontainer = (LinearLayout)findViewById(R.id.main_container);
+        rank = (Button) findViewById(R.id.rank);
+        shop = (Button) findViewById(R.id.shop);
+        home = (Button) findViewById(R.id.home);
+        trash = (Button) findViewById(R.id.trash);
+        user = (Button) findViewById(R.id.user);
+        mainontainer = (LinearLayout) findViewById(R.id.main_container);
 
         fragmentManager = getSupportFragmentManager();
 
@@ -51,7 +51,7 @@ public class Main2Activity extends AppCompatActivity {
 
         ft = fragmentManager.beginTransaction();
         home.setBackgroundResource(R.drawable.home);
-        ft.addToBackStack(null).replace(R.id.main_container,homeFragment).commit();
+        ft.addToBackStack(null).replace(R.id.main_container, homeFragment).commit();
 
 
 // 클릭으로 프래그먼트 이동

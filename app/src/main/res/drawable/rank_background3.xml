@@ -7,8 +7,6 @@
                 android:topLeftRadius="25dp"
                 android:topRightRadius="25dp"/>
             <padding
-                android:bottom="1.5dp"
-
                 android:top="1.5dp" />
             <solid android:color="#09CCCCCC" />
         </shape>
@@ -20,8 +18,6 @@
                 android:topLeftRadius="25dp"
                 android:topRightRadius="25dp"/>
             <padding
-                android:bottom="1.5dp"
-
                 android:top="1.5dp" />
             <solid android:color="#0BCCCCCC" />
         </shape>
@@ -33,8 +29,6 @@
                 android:topLeftRadius="25dp"
                 android:topRightRadius="25dp"/>
             <padding
-                android:bottom="1.5dp"
-
                 android:top="1.5dp" />
             <solid android:color="#0DCCCCCC" />
         </shape>
@@ -46,7 +40,6 @@
                 android:topLeftRadius="25dp"
                 android:topRightRadius="25dp"/>
             <padding
-                android:bottom="1.5dp"
                 android:top="1.5dp" />
             <solid android:color="#10CCCCCC" />
         </shape>
@@ -57,10 +50,6 @@
             <corners
                 android:topLeftRadius="25dp"
                 android:topRightRadius="25dp"/>
-            <padding
-                android:bottom="1.5dp"
-                android:top="1.5dp" />
-            <solid android:color="#1ACCCCCC" />
         </shape>
     </item> <!-- Background -->
     <item
@@ -68,7 +57,6 @@
         <shape android:shape="rectangle">
             <corners
                 android:topLeftRadius="25dp" />
-
             <stroke
                 android:width="20dp"
                 android:color="#ffffff"/>

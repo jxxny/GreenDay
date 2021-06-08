@@ -1,46 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:right="20dp"
-        android:left="20dp">
+        android:right="20dp">
         <shape android:shape="rectangle">
             <corners
                 android:topLeftRadius="25dp"
                 android:topRightRadius="25dp"/>
             <padding
-                android:bottom="1.5dp"
                 android:top="1.5dp" />
+            <solid android:color="#09CCCCCC" />
         </shape>
     </item>
     <item
-        android:right="20dp"
-        android:left="20dp">
+        android:right="20dp">
         <shape android:shape="rectangle">
             <corners
                 android:topLeftRadius="25dp"
                 android:topRightRadius="25dp"/>
             <padding
-                android:bottom="1.5dp"
                 android:top="1.5dp" />
+            <solid android:color="#0BCCCCCC" />
         </shape>
     </item>
     <item
-        android:right="20dp"
-        android:left="20dp">
+        android:right="20dp">
         <shape android:shape="rectangle">
             <corners
                 android:topLeftRadius="25dp"
                 android:topRightRadius="25dp"/>
             <padding
-                android:bottom="1.5dp"
-
                 android:top="1.5dp" />
             <solid android:color="#0DCCCCCC" />
         </shape>
     </item>
     <item
-        android:right="20dp"
-        android:left="20dp">
+        android:right="20dp">
         <shape android:shape="rectangle">
             <corners
                 android:topLeftRadius="25dp"
@@ -51,27 +45,20 @@
         </shape>
     </item>
     <item
-        android:right="20dp"
-        android:left="20dp">
+        android:right="20dp">
         <shape android:shape="rectangle">
             <corners
                 android:topLeftRadius="25dp"
                 android:topRightRadius="25dp"/>
-            <padding
-                android:top="1.5dp" />
-            <solid android:color="#1ACCCCCC" />
         </shape>
     </item> <!-- Background -->
     <item
-        android:right="25dp"
-        android:left="25dp">
+        android:right="25dp">
         <shape android:shape="rectangle">
             <corners
-                android:topLeftRadius="25dp"
                 android:topRightRadius="25dp"/>
-
             <stroke
-                android:width="22dp"
+                android:width="20dp"
                 android:color="#ffffff"/>
             <solid android:color="#ffffff" />
         </shape>

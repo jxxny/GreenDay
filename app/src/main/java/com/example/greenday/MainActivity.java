@@ -38,7 +38,8 @@ public class MainActivity extends AppCompatActivity{
         login_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "환경 지키기, 그린데이와 함께해요!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(),Main2Activity.class);
+                startActivity(intent);
             }
         });
     }

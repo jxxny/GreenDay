@@ -109,7 +109,7 @@ public class join extends AppCompatActivity {
                 if(matcher.find() && pwd.equals(repwd)){
                     setImage.setImageBitmap(bitmap1);
                 }else if(repwd.equals("")){
-                    setImage.setImageResource(R.drawable.setImage);
+                    setImage.setImageResource(R.drawable.setimage);
                 }
                 else{
                     setImage.setImageBitmap(bitmap2);

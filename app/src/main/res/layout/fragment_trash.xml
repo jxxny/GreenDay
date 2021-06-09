@@ -333,6 +333,7 @@
                 android:layout_marginLeft="32dp"
                 android:layout_marginTop="16dp"
                 android:background="#FFFFFF"
+                android:fontFamily="@font/nanum_b"
                 android:gravity="center"
                 android:text="목이 너무 말라서 편의점에서 생수를 구매했다.\n다 마신 뒤 버리고 싶은데 페트병은 어떻게 버려야할까?"
                 android:textColor="#000000"
@@ -345,6 +346,7 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="16dp"
                 android:background="#FFFFFF"
+                android:fontFamily="@font/nanum_b"
                 android:text="저녁 메뉴로 집밥대신 컵라면 작은컵을 먹었다.\n컵라면 안쪽에 빨간 흔적은 어떻게 지울 수 있을까?"
                 app:layout_constraintStart_toStartOf="@+id/recyclequiz_button1"
                 app:layout_constraintTop_toBottomOf="@+id/recyclequiz_button1" />

@@ -88,18 +88,23 @@ public class join extends AppCompatActivity {
         join_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                matcher1 = pattern1.matcher(insert_pwd.getText().toString());
                 if(insert_id.getText().toString().equals(result)){
                     if(result.equals("abcdef")){
                         Toast.makeText(getApplicationContext(),"중복된 아이디입니다.",Toast.LENGTH_SHORT).show();
                         result = null;
                     }
                     else{
-                        if(insert_pwd.getText().toString().equals(insert_repwd.getText().toString())){
-                            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                            startActivity(intent);
+                        if(matcher1.find()){
+                            if(insert_pwd.getText().toString().equals(insert_repwd.getText().toString())) {
+                                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                startActivity(intent);
+                            }
+                            else{
+                                Toast.makeText(getApplicationContext(),"비밀번호가 일치하지 않습니다.",Toast.LENGTH_SHORT).show();
+                            }
                         }else{
-                            Toast.makeText(getApplicationContext(),"비밀번호가 일치하지 않습니다.",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(),"소대문자, 숫자, 특수문자를\n8~15글자 입력해주세요.",Toast.LENGTH_SHORT).show();
                         }
                     }
                 }else{

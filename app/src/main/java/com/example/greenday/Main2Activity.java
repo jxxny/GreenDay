@@ -57,7 +57,7 @@ public class Main2Activity extends AppCompatActivity {
         trashFragment = new TrashFragment();
         userFragment = new UserFragment();
 
-        ft = fragmentManager.beginTransaction();
+        ft = fragmentManager.beginTransaction(); // 프래그먼트로 들어올 때 홈 프래그먼트로 시작
         home.setBackgroundResource(R.drawable.home);
         ft.addToBackStack(null).replace(R.id.main_container, homeFragment).commit();
 

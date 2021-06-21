@@ -38,11 +38,11 @@ public class LoadingActivity extends AppCompatActivity {
                     mImageDrawable.setLevel(mImageDrawable.getLevel() + 2500); // 사진이 2500만큼 올라와 있음
                     while(per[0] != 100){
                         try{
-                            Thread.sleep(100); // 0.6초
+                            Thread.sleep(100); // 0.1초
                         }catch(Exception e){
                             e.printStackTrace();
                         }
-                        final int percent = (int) Math.floor(Math.random() * 4 + 1); // 1~7 랜덤
+                        final int percent = (int) Math.floor(Math.random() * 4 + 1); // 1~4 랜덤
 
                         textView.post(new Runnable() {
                             @Override

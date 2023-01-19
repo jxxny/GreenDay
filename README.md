@@ -1,4 +1,3 @@
 # GreenDay
-Final Project
 
-README
+[본과정 캡스톤] 재활용, 업사이클링에 대한 앱 제작
